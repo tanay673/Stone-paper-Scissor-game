@@ -14,103 +14,74 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
   background-color: var(--very-dark-blue);
+  text-align: center;
   color: var(--white);
-  padding: 20px;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-}
-
-.rules-container {
-  width: 90%;
-  max-width: 600px;
-  padding: 15px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  border: 3px solid var(--yellow);
-  background-color: var(--white);
-  color: var(--very-dark-blue);
-  text-align: left;
-  font-size: 1rem;
-}
-
-.score-container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 30px;
-  font-size: 1.5rem;
-}
-
-.options-container {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.btn-container {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  flex-wrap: wrap;
+  margin: 15px 0 20px;
 }
 
 .btn {
   cursor: pointer;
-  padding: 10px 20px;
-  font-size: 1rem;
+  width: 100px;
+  margin: 10px;
   color: var(--very-dark-blue);
   background-color: var(--golden-yellow);
   background-image: linear-gradient(#fecc4c, #ffac33);
-  border: 3px solid var(--golden-yellow);
-  border-radius: 8px;
-  transition: background-image 0.3s ease, transform 0.2s ease;
+  border-color: var(--golden-yellow);
+  border-width: 3px;
 }
 
 .btn:hover {
   background-image: linear-gradient(#ffcc4c, #f89808);
-  transform: scale(1.05);
 }
 
-.results-container {
-  text-align: center;
+.rules-container {
+  padding: 10px 0;
+  margin: auto;
+  border-radius: 15px;
+  border: 5px solid var(--yellow);
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+}
+
+.rules-container ul {
+  list-style-type: none;
+}
+
+.rules-container p {
+  margin: 10px 0;
+}
+
+@media (min-width: 760px) {
+  .rules-container {
+    width: 60%;
+  }
+}
+
+.score-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
   font-size: 1.2rem;
 }
 
+.score {
+  font-weight: 500;
+}
+
+.results-container {
+  font-size: 1.3rem;
+  margin: 15px 0;
+}
+
 #winner-msg {
-  margin-top: 20px;
-  font-size: 1.5rem;
-  font-weight: bold;
+  margin-top: 25px;
 }
 
 #reset-game-btn {
   display: none;
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: var(--yellow);
-  color: var(--very-dark-blue);
-  font-size: 1.1rem;
-  border-radius: 8px;
-}
-
-@media (min-width: 768px) {
-  .rules-container {
-    width: 60%;
-  }
-
-  .btn-container {
-    justify-content: space-around;
-  }
-
-  .btn {
-    padding: 15px 30px;
-  }
+  margin: 20px auto;
 }
