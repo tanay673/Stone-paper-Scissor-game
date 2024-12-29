@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --very-dark-blue: #0a0a23;
+  --white: #ffffff;
+  --yellow: #f1be32;
+  --golden-yellow: #feac32;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.rules-container {
+  width: 90%;
+  max-width: 600px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 3px solid var(--yellow);
+  background-color: var(--white);
+  color: var(--very-dark-blue);
+  text-align: left;
+  font-size: 1rem;
+}
+
+.score-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.options-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: var(--very-dark-blue);
+  background-color: var(--golden-yellow);
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border: 3px solid var(--golden-yellow);
+  border-radius: 8px;
+  transition: background-image 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-image: linear-gradient(#ffcc4c, #f89808);
+  transform: scale(1.05);
+}
+
+.results-container {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#winner-msg {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#reset-game-btn {
+  display: none;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: var(--yellow);
+  color: var(--very-dark-blue);
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .rules-container {
+    width: 60%;
+  }
+
+  .btn-container {
+    justify-content: space-around;
+  }
+
+  .btn {
+    padding: 15px 30px;
+  }
+}
